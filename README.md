@@ -12,7 +12,13 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run main.js
+```
+
+To run (hot reload):
+
+```bash
+bun --hot main.js
 ```
 
 This project was created using `bun init` in bun v1.2.19. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.

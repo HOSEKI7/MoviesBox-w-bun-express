@@ -1,6 +1,7 @@
 {
   "name": "moviesbox",
-  "module": "index.ts",
+  "module": "main.js",
+  "dev": "bun --hot main.js",
   "type": "module",
   "private": true,
   "devDependencies": {
