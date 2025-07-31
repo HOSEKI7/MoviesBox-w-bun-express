@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #ff3700;
+}
+
+body {
+  background: grey;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 40px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav li {
+  list-style: none;
+  margin-left: 0 10px;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 8px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.nav li a:hover {
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* .nav li a.active {
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+} */
+
+.search {
+  position: relative;
+  width: 300px;
+  height: 40px;
+}
+
+.search input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: transparent;
+  border: 1 solid grey;
+  outline: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 0 10px 0 45px;
+  backdrop-filter: blur(10px);
+}
+
+.search input::placeholder {
+  color: white;
+}
+
+.search i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid white;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("/img/kiminonawa_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.banner::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: relative;
+  max-width: 550px;
+  display: none;
+  visibility: hidden;
+  transform: scale(0);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.content.active {
+  display: block;
+  visibility: visible;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.movie-title {
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+.banner .content h4 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.banner .content h4 span {
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner .content h4 span:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+.banner .content h4 span:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.banner .content h4 span i {
+  color: var(--primary-color);
+}
+
+.banner .content p {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: white;
+  margin: 10px 0 20px;
+}
+
+.banner .content .buttons {
+  position: relative;
+}
+
+.banner .content .buttons a {
+  font-family: "poppins", sans-serif;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: pointer;
+  cursor: pointer;
+  -webkit-transition: pointer;
+  -moz-transition: pointer;
+  -ms-transition: pointer;
+  -o-transition: pointer;
+}
+
+.banner .content .buttons a:nth-child(2) {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.banner .content .buttons a:hover:nth-child(2) {
+  background: rgba(15, 15, 15, 0.9);
+}
+
+.banner .carousel-box {
+  position: relative;
+  min-width: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.carousel {
+  position: relative;
+  height: 550px;
+  perspective: 1500;
+}
+
+.carousel .carousel-item {
+  width: 250px;
+  cursor: pointer;
+}
+
+.carousel .carousel-item img {
+  max-width: 235px;
+  border-radius: 10px;
+  transform: translateX(8px) translateY(-100px);
+  object-fit: cover;
+  object-position: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: translateX(8px) translateY(-100px);
+  -moz-transform: translateX(8px) translateY(-100px);
+  -ms-transform: translateX(8px) translateY(-100px);
+  -o-transform: translateX(8px) translateY(-100px);
+}
+
+.play {
+  color: white;
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  cursor: pointer !important;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.play i {
+  color: white;
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.play:hover {
+  color: var(--primary-color);
+}
+
+.sci li {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.sci li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
