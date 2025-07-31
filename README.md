@@ -1,4 +1,7 @@
-# moviesbox
+# MoviesBox-w-bun-express
+
+Website Streaming platform and film list, connect and fetch Movies data from Database.
+Build with HTML, CSS, JS, Bun with Express and MYSQL.
 
 To install dependencies:
 
