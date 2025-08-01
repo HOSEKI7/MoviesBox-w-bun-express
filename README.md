@@ -10,6 +10,18 @@ Feature:
 - Bookmark (coming soon)
 - Carousel
 
+To download / clone:
+
+```bash
+git clone https://github.com/HOSEKI7/MoviesBox-with-bun-express
+cd MoviesBox-with-bun-express
+```
+
+To create database with SQL:
+
+- Go to /database/
+- Copy, paste and run SQL to your Database Management Tool
+
 To install dependencies:
 
 ```bash
