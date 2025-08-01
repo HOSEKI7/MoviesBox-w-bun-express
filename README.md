@@ -3,6 +3,8 @@
 Streaming platform(fake) and film list web base, connect and fetch Movies data from Database.
 Build with HTML, CSS, JS, Bun with Express and MYSQL.
 
+<img src="img/Home_Preview.png" />
+
 ##### Feature:
 
 - Searching (coming soon)
