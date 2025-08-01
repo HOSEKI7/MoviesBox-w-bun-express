@@ -5,9 +5,9 @@ Build with HTML, CSS, JS, Bun with Express and MYSQL.
 
 Feature:
 
-- Searching
-- Filtering
-- Bookmark
+- Searching (coming soon)
+- Filtering (coming soon)
+- Bookmark (coming soon)
 - Carousel
 
 To install dependencies:
