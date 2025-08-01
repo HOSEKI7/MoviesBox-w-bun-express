@@ -12,7 +12,7 @@ $(document).ready(function () {
   // Auto-play carousel
   setInterval(function () {
     $(".carousel").carousel("next");
-  }, 5000);
+  }, 8000);
 
   // Click handler for movie posters
   $(".movie-poster").on("click", function (e) {
