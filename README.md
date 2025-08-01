@@ -19,7 +19,7 @@ cd MoviesBox-with-bun-express
 
 To create database with SQL:
 
-- Go to /database/
+- Go to /database/project-moviesbox.sql
 - Copy, paste and run SQL to your Database Management Tool
 
 To install dependencies:
