@@ -34,7 +34,7 @@
       <div class="content active">
         <!-- Mengambil gambar judul dari database -->
         <img
-          src="/img/<%= movies[0].title %>"
+          src="<%= movies[0].logo_url %>"
           alt="Movie Title"
           class="movie-title"
           id="movie_title_img"
@@ -67,8 +67,8 @@
             <a
               href="javascript:void(0)"
               class="movie-poster"
-              data-title-img="<%= movie.title %>"
-              data-background-img="<%= movie.thumbnail %>"
+              data-title-img="<%= movie.logo_url %>"
+              data-background-img="<%= movie.background_url %>"
               data-release-year="<%= movie.release_year %>"
               data-parental="<%= movie.parental_rating || '13+' %>"
               data-duration="<%= movie.duration %>"
@@ -76,7 +76,7 @@
               data-sinopsis="<%= movie.sinopsis %>"
               data-trailer-url="<%= movie.trailer_url %>"
             >
-              <img src="/img/<%= movie.posters %>" alt="<%= movie.title %>" />
+              <img src="<%= movie.posters_url %>" alt="<%= movie.title %>" />
             </a>
           </div>
           <% }); %>

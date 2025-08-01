@@ -32,13 +32,13 @@ $(document).ready(function () {
 
     // Update elements
     $(".banner").css({
-      "background-image": `url("/img/${data.backgroundImg}")`,
+      "background-image": `url("${data.backgroundImg}")`,
       "background-size": "cover",
       "background-position": "center",
     });
 
     // Update movie title image - mengambil dari data attribute
-    $("#movie_title_img").attr("src", `/img/${data.titleImg}`);
+    $("#movie_title_img").attr("src", `${data.titleImg}`);
 
     // Update other info
     $("#release_year").text(data.releaseYear);
