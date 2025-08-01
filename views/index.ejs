@@ -52,7 +52,7 @@
         </h4>
         <p id="sinopsis"><%= movies[0].sinopsis %></p>
         <div class="buttons">
-          <a href="/watch/<%= movies[0].movie_id %>"
+          <a href="/watch/<%= movies[0].movie_id %>" class="watch"
             ><i class="fa fa-play" aria-hidden="true"></i> Watch</a
           >
           <a href="#"
@@ -82,8 +82,13 @@
           <% }); %>
         </div>
       </div>
-      <a href="" class="play">
-        <i class="fa fa-play-circle-o" aria-hidden="true"></i>Whatch Trailer
+      <a
+        href="<%= movies[0].trailer_url %>"
+        class="trailer_url"
+        id="trailer_link"
+        target="_blank"
+      >
+        <i class="fa fa-play-circle-o" aria-hidden="true"></i> Watch Trailer
       </a>
       <ul class="sci">
         <li>

@@ -48,8 +48,8 @@ $(document).ready(function () {
     $("#sinopsis").text(data.sinopsis);
 
     // Update buttons
-    $(".buttons a:first").attr("href", `/watch/${movieId}`);
-    $(".play").attr("href", data.trailerUrl);
+    $(".buttons a:first").attr("href", `${movieId}`);
+    $("#trailer_url").attr("href", data.trailerUrl);
   }
 
   // Initialize with first movie
