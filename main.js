@@ -16,15 +16,23 @@ const db = mysql.createConnection({
 });
 
 db.connect((err) => {
-  if (err) {
-    console.error("Database connection failed");
-    throw err;
-  }
-  console.log("Connected to database.");
+  if (err) throw err;
+  db.query("SELECT * FROM movies", (err, rows) => {
+    if (err) throw err;
+  });
+  console.log("Database Connected");
 });
 
 app.get("/", (req, res) => {
-  res.render("index");
+  const sql = "SELECT * FROM movies";
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    const movies = JSON.parse(JSON.stringify(result));
+    res.render("index", {
+      movies: movies,
+      logo: "MoviesBox",
+    });
+  });
 });
 
 app.listen(port, () => {
